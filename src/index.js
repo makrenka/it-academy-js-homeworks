@@ -1,12 +1,9 @@
 import "./main.scss";
-import { Logo } from './components/logo/Logo';
-import { HeaderNavigation } from './components/header-navigation/Header-navigation';
+import { Header } from './components/header/Header';
 
-const add123 = (a, b) => a + b;
 let root  = document.querySelector('#root');
 
-root.insertAdjacentHTML('beforeend', Logo());
-root.insertAdjacentHTML('beforeend', HeaderNavigation());
+root.insertAdjacentHTML('beforeend', Header());
 
-const res = add123(222, 3);
+
 console.log("Helloasda");
