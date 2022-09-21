@@ -12,60 +12,59 @@
 
 .header__navigation {
     display: flex;
-    align-items: center;
+    align-items: center;    
+
+    &-link {
+        font-size: 16px;
+        line-height: 21px;
+        color: #23262D;
+        text-decoration: none;
+        transition: color .3s;
+    }
 }
 
 .header__navigation-list {
     display: flex;
-}
 
-.header__navigation-list-item {
-    margin-right: 50px;
-}
-
-.header__navigation-link {    
-    font-size: 16px;
-    line-height: 21px;
-    color: #23262D;
-    text-decoration: none;
-    transition: color .3s;
+    &-item {
+        margin-right: 50px;
+    }
 }
 
 .header__languege-box {
     display: flex;
-}
 
-.header__languege-box-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 30px;
-}
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 30px;
 
-.header__languege-box-item:first-child {
-    background-color: #E36F59;
-    border: 2px solid #E36F59;
-    border-right: none;
-    border-radius: 6px 0px 0px 6px;
-}
+        &:first-child {
+            background-color: #E36F59;
+            border: 2px solid #E36F59;
+            border-right: none;
+            border-radius: 6px 0px 0px 6px;
 
-.header__languege-box-item:last-child {
-    border: 2px solid #E2E7EB;
-    border-left: none;
-    border-radius: 0px 6px 6px 0px;
-    background: #fff;
-}
+            a {
+                color: #fff;
+            }
+        }
 
-.header__languege-box-link {    
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    text-decoration: none;
-    color: #23262D;
-}
+        &:last-child {
+            border: 2px solid #E2E7EB;
+            border-left: none;
+            border-radius: 0px 6px 6px 0px;
+            background: #fff;
+        }
+    }
 
-.header__languege-box-item:first-child a {
-    color: #fff;
+    &-link {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        text-decoration: none;
+        color: #23262D;
+    }
 }
-
