@@ -29,3 +29,8 @@ import "./main.scss";
 //     console.log(string);
 // }
 
+// Ввести число, большее 100
+// let number;
+// do {
+//     number = prompt('Введите число, большее 100', '');
+// } while (number <= 100 && number);
