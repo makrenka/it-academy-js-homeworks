@@ -5,5 +5,3 @@ let root  = document.querySelector('#root');
 
 root.insertAdjacentHTML('beforeend', Header());
 
-
-console.log("Helloasda");
