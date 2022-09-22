@@ -36,30 +36,49 @@ import "./main.scss";
 // } while (number <= 100 && number);
 
 // ANKETA
-const lastName = prompt('Введите вашу фамилию', '');
-const firstName = prompt('Введите ваше имя', '');
-const patronymic = prompt('Введите ваше отчество', '');
-const age = prompt('Ваш возраст', '');
-const gender = confirm('Ваш пол - мужской?');
-const lineWrapper = '\n';
+let lastName = prompt('Введите вашу фамилию', '');
+let firstName = prompt('Введите ваше имя', '');
+let patronymic = prompt('Введите ваше отчество', '');
+let age = prompt('Ваш возраст', '');
+let gender = confirm('Ваш пол - мужской?');
+let lineWrapper = '\n';
 
-let fullName = () => {
-    if (lastName == '') {
-        return lastName;
+function checkLastName() {
+    if (lastName == '' || lastName == null) {
+        do {
+            lastName = prompt('Введите вашу фамилию', '');
+        } while (lastName == '' || lastName == null);
+        return 'ваше ФИО: ' + lastName + ' ' + firstName + ' ' + patronymic;
     } else {
         return 'ваше ФИО: ' + lastName + ' ' + firstName + ' ' + patronymic;
     }
-}
+};
 
-let ageInYears = 'ваш возраст в годах: ' + age;
-let ageInDays = 'ваш возраст в днях: ' + age * 365;
-let ageAfterFiveYears = 'через 5 лет вам будет: ' + (Number(age) + 5);
+let ageInYears;
+let ageInDays;
+let ageAfterFiveYears;
+
+function checkAge() {
+    if (age < 1 || age > 120) {
+        do {
+            age = prompt('Введите правильный возраст', '');
+        } while (age < 1 || age > 120);
+        ageInYears = 'ваш возраст в годах: ' + age;
+        ageInDays = 'ваш возраст в днях: ' + age * 365;
+        ageAfterFiveYears = 'через 5 лет вам будет: ' + (Number(age) + 5);
+    } else {
+        ageInYears = 'ваш возраст в годах: ' + age;
+        ageInDays = 'ваш возраст в днях: ' + age * 365;
+        ageAfterFiveYears = 'через 5 лет вам будет: ' + (Number(age) + 5);
+    }
+};
+
 let genderUser = 'ваш пол: ' + gender;
 let penny = (age < 62) ? 'вы на пенсии: нет' : 'вы на пенсии: да';
 
 function showAnketa() {
-    return fullName + lineWrapper + ageInYears + lineWrapper + ageInDays + 
-    lineWrapper + ageAfterFiveYears + lineWrapper + genderUser + lineWrapper + penny;
+    return checkLastName() + lineWrapper + checkAge() + lineWrapper + ageInDays +
+        lineWrapper + ageAfterFiveYears + lineWrapper + genderUser + lineWrapper + penny;
 }
 
 alert(showAnketa());
