@@ -47,27 +47,27 @@ function checkLastName() {
         do {
             lastName = prompt('Введите вашу фамилию', '');
         } while (lastName == '' || lastName == null);
-        return 'ваше ФИО: ' + lastName + ' ' + firstName + ' ' + patronymic;
+        return `ваше ФИО: ${lastName} ${firstName} ${patronymic}`;
     } else {
-        return 'ваше ФИО: ' + lastName + ' ' + firstName + ' ' + patronymic;
+        return `ваше ФИО: ${lastName} ${firstName} ${patronymic}`;
     }
 };
 
 let ageInDays;
 let ageAfterFiveYears;
 
-function checkAge () {
+function checkAge() {
     if (age < 1 || age > 120) {
         do {
             age = prompt('Введите правильный возраст', '');
         } while (age < 1 || age > 120);
-        ageInDays = 'ваш возраст в днях: ' + age * 365;  
-        ageAfterFiveYears = 'через 5 лет вам будет: ' + (Number(age) + 5);
-        return 'ваш возраст в годах: ' + age;
+        ageInDays = `ваш возраст в днях: ${age * 365}`;
+        ageAfterFiveYears = `через 5 лет вам будет: ${Number(age) + 5}`;
+        return `ваш возраст в годах: ${age}`;
     } else {
-        ageInDays = 'ваш возраст в днях: ' + age * 365;  
-        ageAfterFiveYears = 'через 5 лет вам будет: ' + (Number(age) + 5);
-        return 'ваш возраст в годах: ' + age;        
+        ageInDays = `ваш возраст в днях: ${age * 365}`;
+        ageAfterFiveYears = `через 5 лет вам будет: ${Number(age) + 5}`;
+        return `ваш возраст в годах: ${age}`;
     }
 };
 
@@ -75,8 +75,7 @@ let genderUser = (gender == true) ? 'ваш пол: мужской' : 'ваш п
 let penny = (age < 62) ? 'вы на пенсии: нет' : 'вы на пенсии: да';
 
 function showAnketa() {
-    return checkLastName() + '\n' + checkAge() + '\n' + ageInDays +
-    '\n' + ageAfterFiveYears + '\n' + genderUser + '\n' + penny;
+    return `${checkLastName()} \n ${checkAge()} \n ${ageInDays} \n ${ageAfterFiveYears} \n ${genderUser} \n ${penny}`;
 }
 
 alert(showAnketa());
