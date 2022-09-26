@@ -43,10 +43,10 @@ let age = prompt('Ваш возраст', '');
 let gender = confirm('Ваш пол - мужской?');
 
 function checkLastName() {
-    if (lastName == '' || lastName == null) {
+    if (lastName == '' || lastName == null || Number(lastName)) {
         do {
             lastName = prompt('Введите вашу фамилию', '');
-        } while (lastName == '' || lastName == null);
+        } while (lastName == '' || lastName == null || Number(lastName));
         return `ваше ФИО: ${lastName} ${firstName} ${patronymic}`;
     } else {
         return `ваше ФИО: ${lastName} ${firstName} ${patronymic}`;
@@ -57,10 +57,10 @@ let ageInDays;
 let ageAfterFiveYears;
 
 function checkAge() {
-    if (age < 1 || age > 120) {
+    if (age < 1 || age > 120 || isNaN(age)) {
         do {
             age = prompt('Введите правильный возраст', '');
-        } while (age < 1 || age > 120);
+        } while (age < 1 || age > 120 || isNaN(age));
         ageInDays = `ваш возраст в днях: ${age * 365}`;
         ageAfterFiveYears = `через 5 лет вам будет: ${Number(age) + 5}`;
         return `ваш возраст в годах: ${age}`;
@@ -79,4 +79,3 @@ function showAnketa() {
 }
 
 alert(showAnketa());
-
