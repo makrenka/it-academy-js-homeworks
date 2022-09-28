@@ -1,1 +1,1 @@
-# it-academy-js-homeworks
+# mentoring-simple-webpack-starter
