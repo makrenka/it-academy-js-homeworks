@@ -1,4 +1,5 @@
 // 1. Clone array
+
 // let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
 
 // function arrayClone(arr) {
@@ -9,9 +10,10 @@
 
 // console.log(arr1);
 
-
+//---------------------------------------------------------------------
 
 // 2. Convert array to string
+
 // let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
 
 // let str1 = vegetables.join();
@@ -20,9 +22,10 @@
 // console.log(str1); 
 // console.log(str2);
 
-
+//---------------------------------------------------------------------
 
 // 3. Colon between odd numbers
+
 // const num = prompt('Введите число', 55);
 
 // function colonOdd (num) {
@@ -42,22 +45,25 @@
 
 // console.log(colonOdd (num));
 
+//---------------------------------------------------------------------
 
+// 4. Change register
 
-// 4. Case substitution
-// function changeRegister (str) { 
+// const str = prompt('Введите слово', 'КаЖдЫй ОхОтНиК');
+
+// function changeRegister(str) {
 //     let arr = str.split('');
 //     let arrMod = [];
-  
-//     for (let i = 0; i < arr.length; i++) {
-//       if (arr[i] === arr[i].toUpperCase()) {
-//         arrMod.push(arr[i].toLowerCase());
-//       } else {
-//         arrMod.push(arr[i].toUpperCase());
-//       }
+
+//     for (let item of arr) {
+//         if (item === item.toUpperCase()) {
+//             arrMod.push(item.toLowerCase());
+//         } else {
+//             arrMod.push(item.toUpperCase());
+//         }
 //     }
-  
-//     return arrMod.join('');
-//   }
-  
-//   console.log(changeRegister(str));
+
+//     return arrMod.join('').split();
+// }
+
+// console.log(changeRegister(str));
