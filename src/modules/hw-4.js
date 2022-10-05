@@ -44,3 +44,20 @@
 
 
 
+// 4. Case substitution
+// function changeRegister (str) { 
+//     let arr = str.split('');
+//     let arrMod = [];
+  
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] === arr[i].toUpperCase()) {
+//         arrMod.push(arr[i].toLowerCase());
+//       } else {
+//         arrMod.push(arr[i].toUpperCase());
+//       }
+//     }
+  
+//     return arrMod.join('');
+//   }
+  
+//   console.log(changeRegister(str));
