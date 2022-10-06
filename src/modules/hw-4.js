@@ -142,11 +142,27 @@
 
 // 8. Descending sort
 
-let numbers = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+// let numbers = [3, 8, 7, 6, 5, -4, 3, 2, 1];
 
-function compareNumbers(arr) {
-    arr.sort((a, b) => b - a);
-    return arr;
+// function compareNumbers(arr) {
+//     arr.sort((a, b) => b - a);
+//     return arr;
+// }
+
+// console.log(compareNumbers(numbers));
+
+//---------------------------------------------------------------------
+
+// 9. Sorting an array of objects
+
+let litmir = [
+    { author: 'Хэленка', title: 'Улетела сказка' },
+    { author: 'Коул Кресли', title: 'Восстание Аркан' },
+    { author: 'Райчел Мид', title: 'Золотая лилия' }
+];
+
+function sortByTitle(litmir) {
+    return litmir.sort((a, b) => a.title > b.title ? 1 : -1);
 }
 
-console.log(compareNumbers(numbers));
+console.log(sortByTitle(litmir));
