@@ -120,20 +120,33 @@
 
 // 7. Count identic
 
-function countIdentic(arr) {
-    let count = 0;
-    let arrClone = arr.slice();
-    let current;
-    let test = [];
-    for(let i = 1; i < arr.length; i++) {
-      current = arrClone.shift();
-      if(test.indexOf(current) === -1) {
-        test.push(current);
-        if(arrClone.indexOf(current) >= 0) count++;
-      }     
-    }
-    return count;
-  }
-  
-  console.log(countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8]));
-  console.log(countIdentic([15,14,13,19,13,14,14,14,7,9,9]));
+// function countIdentic(arr) {
+//     let count = 0;
+//     let arrClone = arr.slice();
+//     let current;
+//     let test = [];
+//     for (let i = 1; i < arr.length; i++) {
+//         current = arrClone.shift();
+//         if (test.indexOf(current) === -1) {
+//             test.push(current);
+//             if (arrClone.indexOf(current) >= 0) count++;
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8]));
+// console.log(countIdentic([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]));
+
+//---------------------------------------------------------------------
+
+// 8. Descending sort
+
+let numbers = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+
+function compareNumbers(arr) {
+    arr.sort((a, b) => b - a);
+    return arr;
+}
+
+console.log(compareNumbers(numbers));
