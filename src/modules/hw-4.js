@@ -67,3 +67,25 @@
 // }
 
 // console.log(changeRegister(str));
+
+//---------------------------------------------------------------------
+
+// 5. Remove duplicates
+
+// let arr = ["php", "php", "css", "css",
+//   "script", "script", "html", "html", "java"
+// ];
+
+// let result = [arr[0]];
+
+// function removeDuplicates(arr) {
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] !== arr[i - 1]) {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result;
+// }
+
+// removeDuplicates(arr);
+// console.log(result);
