@@ -72,23 +72,23 @@
 
 // 5. Remove duplicates
 
-let arr = ["php", "php", "css", "css",
-    "script", "script", "html", "html", "java"
-];
+// let arr = ["php", "php", "css", "css",
+//     "script", "script", "html", "html", "java"
+// ];
 
-let result = [];
+// let result = [];
 
-function removeDuplicates(arr) {
-    for (let item of arr) {
-        if (!result.includes(item)) {
-            result.push(item);
-        }
-    }
-    return result;
-}
+// function removeDuplicates(arr) {
+//     for (let item of arr) {
+//         if (!result.includes(item)) {
+//             result.push(item);
+//         }
+//     }
+//     return result;
+// }
 
-removeDuplicates(arr);
-console.log(result);
+// removeDuplicates(arr);
+// console.log(result);
 
 //---------------------------------------------------------------------
 
@@ -168,3 +168,23 @@ console.log(result);
 
 //---------------------------------------------------------------------
 
+// 10. Find all values of a given property
+
+var litmir = [
+    { author: 'Хэленка', title: 'Улетела сказка' },
+    { author: 'Коул Кресли', title: 'Восстание Аркан' },
+    { author: 'Райчел Мид', title: 'Золотая лилия' }
+];
+
+function propertyValue(array, key) {
+    let arr = [];
+    for (let item of array) {
+        if (item.hasOwnProperty(key)) {
+            arr.push(item[key]);
+        }
+    }
+    return arr;
+}
+
+console.log(propertyValue(litmir, 'title'));
+console.log(propertyValue(litmir, 'author'));
