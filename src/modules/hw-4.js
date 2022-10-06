@@ -89,3 +89,29 @@
 
 // removeDuplicates(arr);
 // console.log(result);
+
+//---------------------------------------------------------------------
+
+// 6. Sum of elements of two arrays
+
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [4, 5, 6];
+let arr3 = [];
+
+function createArr3(arr3) {
+  if(arr1.length > arr2.length) {
+    for(let i = 0; i < arr1.length; i++) {
+      if(arr2[i] === undefined) arr2[i] = 0;
+      arr3.push(arr1[i] + arr2[i]);
+    }
+  } else {
+    for(let i = 0; i < arr2.length; i++) {
+      if(arr1[i] === undefined) arr1[i] = 0;
+      arr3.push(arr1[i] + arr2[i]);
+    }
+  }
+  return arr3;
+}
+
+createArr3(arr3);
+console.log(arr3);
