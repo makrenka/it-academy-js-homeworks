@@ -72,23 +72,23 @@
 
 // 5. Remove duplicates
 
-// let arr = ["php", "php", "css", "css",
-//   "script", "script", "html", "html", "java"
-// ];
+let arr = ["php", "php", "css", "css",
+    "script", "script", "html", "html", "java"
+];
 
-// let result = [arr[0]];
+let result = [];
 
-// function removeDuplicates(arr) {
-//   for (let i = 1; i < arr.length; i++) {
-//     if (arr[i] !== arr[i - 1]) {
-//       result.push(arr[i]);
-//     }
-//   }
-//   return result;
-// }
+function removeDuplicates(arr) {
+    for (let item of arr) {
+        if (!result.includes(item)) {
+            result.push(item);
+        }
+    }
+    return result;
+}
 
-// removeDuplicates(arr);
-// console.log(result);
+removeDuplicates(arr);
+console.log(result);
 
 //---------------------------------------------------------------------
 
@@ -142,13 +142,13 @@
 
 // 8. Descending sort
 
-let numbers = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+// let numbers = [3, 8, 7, 6, 5, -4, 3, 2, 1];
 
-function compareNumbers(arr) {
-  return arr.sort((a, b) => b - a);     
-}
+// function compareNumbers(arr) {
+//     return arr.sort((a, b) => b - a);
+// }
 
-console.log(compareNumbers(numbers));
+// console.log(compareNumbers(numbers));
 
 //---------------------------------------------------------------------
 
@@ -165,3 +165,6 @@ console.log(compareNumbers(numbers));
 // }
 
 // console.log(sortByTitle(litmir));
+
+//---------------------------------------------------------------------
+
