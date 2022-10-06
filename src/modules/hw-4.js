@@ -94,24 +94,46 @@
 
 // 6. Sum of elements of two arrays
 
-let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [4, 5, 6];
-let arr3 = [];
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = [4, 5, 6];
+// let arr3 = [];
 
-function createArr3(arr3) {
-  if(arr1.length > arr2.length) {
-    for(let i = 0; i < arr1.length; i++) {
-      if(arr2[i] === undefined) arr2[i] = 0;
-      arr3.push(arr1[i] + arr2[i]);
+// function createArr3(arr3) {
+//   if(arr1.length > arr2.length) {
+//     for(let i = 0; i < arr1.length; i++) {
+//       if(arr2[i] === undefined) arr2[i] = 0;
+//       arr3.push(arr1[i] + arr2[i]);
+//     }
+//   } else {
+//     for(let i = 0; i < arr2.length; i++) {
+//       if(arr1[i] === undefined) arr1[i] = 0;
+//       arr3.push(arr1[i] + arr2[i]);
+//     }
+//   }
+//   return arr3;
+// }
+
+// createArr3(arr3);
+// console.log(arr3);
+
+//---------------------------------------------------------------------
+
+// 7. Count identic
+
+function countIdentic(arr) {
+    let count = 0;
+    let arrClone = arr.slice();
+    let current;
+    let test = [];
+    for(let i = 1; i < arr.length; i++) {
+      current = arrClone.shift();
+      if(test.indexOf(current) === -1) {
+        test.push(current);
+        if(arrClone.indexOf(current) >= 0) count++;
+      }     
     }
-  } else {
-    for(let i = 0; i < arr2.length; i++) {
-      if(arr1[i] === undefined) arr1[i] = 0;
-      arr3.push(arr1[i] + arr2[i]);
-    }
+    return count;
   }
-  return arr3;
-}
-
-createArr3(arr3);
-console.log(arr3);
+  
+  console.log(countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8]));
+  console.log(countIdentic([15,14,13,19,13,14,14,14,7,9,9]));
