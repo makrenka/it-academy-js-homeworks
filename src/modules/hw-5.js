@@ -86,12 +86,18 @@ class MyString {
     ucFirst() {
         return this.string[0].toUpperCase() + this.string.slice(1);
     }
-    ucWords() {
-        let arr = this.string.split(" ");
-        for (let i = 0; i < arr.length; i++) {
-            arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
-        }
-        return arr;
+    // ucWords() {
+    //     let arr = this.string.split(" ");
+    //     for (let i = 0; i < arr.length; i++) {
+    //         arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+    //     }
+    //     return arr;
+    // }
+    ucWords(c) {
+        return c
+            .split(' ')
+            .map((f) => f[0].toUpperCase() + f.slice(1))
+            .join(" ");
     }
 }
 
