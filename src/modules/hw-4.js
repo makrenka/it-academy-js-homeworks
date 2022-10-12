@@ -45,6 +45,23 @@
 
 // console.log(colonOdd (num));
 
+// !!! Second option:
+
+// const colonOdd = (number) => {
+//     return number
+//         .split("")
+//         .map((item, index, array) => {
+//             const condition = [item, array[index + 1]].every(
+//                 (item) => item % 2 !== 0
+//             );
+//             if (condition && !(index === array.length - 1)) {
+//                 return `${item}:`;
+//             }
+//             return item;
+//         })
+//         .join("");
+// };
+
 //---------------------------------------------------------------------
 
 // 4. Change register
@@ -68,6 +85,21 @@
 
 // console.log(changeRegister(str));
 
+// !!! Second option:
+
+// const changeRegister = (string) => {
+//     return string
+//     .split("")
+//     .map((item) => {
+//         if (item === item.toUpperCase()) {
+//             return item.toLowerCase();
+//         }
+//         return item.toUpperCase();
+//     })
+//     .join("")
+//     .split();
+// }
+
 //---------------------------------------------------------------------
 
 // 5. Remove duplicates
@@ -89,6 +121,13 @@
 
 // removeDuplicates(arr);
 // console.log(result);
+
+// !!! Second option:
+
+// const removeDuplicates = (array) => {
+//     let res = array.filter((item, index) => array.indexOf(item) === index);
+//     return res;
+// }
 
 //---------------------------------------------------------------------
 
@@ -116,6 +155,13 @@
 // createArr3(arr3);
 // console.log(arr3);
 
+// !!! Second option:
+
+// const createArr3 = (array1, array2) => {
+//     let res = array1.map((item, index) => item += array2[index] || 0);
+//     return res;
+// }
+
 //---------------------------------------------------------------------
 
 // 7. Count identic
@@ -137,6 +183,16 @@
 
 // console.log(countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8]));
 // console.log(countIdentic([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]));
+
+// !!! Second option:
+
+// const countIdentic = (array) => {
+//     return array.reduce((acc, item) => {
+//         item = array.shift();
+//         if (array.indexOf(item) >= 0) acc++;
+//         return acc;
+//     }, 0);
+// };
 
 //---------------------------------------------------------------------
 
@@ -170,21 +226,27 @@
 
 // 10. Find all values of a given property
 
-var litmir = [
+let litmir = [
     { author: 'Хэленка', title: 'Улетела сказка' },
     { author: 'Коул Кресли', title: 'Восстание Аркан' },
     { author: 'Райчел Мид', title: 'Золотая лилия' }
 ];
 
-function propertyValue(array, key) {
-    let arr = [];
-    for (let item of array) {
-        if (item.hasOwnProperty(key)) {
-            arr.push(item[key]);
-        }
-    }
-    return arr;
-}
+// function propertyValue(array, key) {
+//     let arr = [];
+//     for (let item of array) {
+//         if (item.hasOwnProperty(key)) {
+//             arr.push(item[key]);
+//         }
+//     }
+//     return arr;
+// }
 
+// !!! Second option:
+
+const propertyValue = (array, key) => array
+    .map((item) => item[key])
+    .join(', ');
+    
 console.log(propertyValue(litmir, 'title'));
 console.log(propertyValue(litmir, 'author'));
