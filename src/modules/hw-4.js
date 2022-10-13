@@ -187,11 +187,10 @@
 // !!! Second option:
 
 // const countIdentic = (array) => {
-//     return array.reduce((acc, item) => {
-//         item = array.shift();
-//         if (array.indexOf(item) >= 0) acc++;
-//         return acc;
-//     }, 0);
+//     const objCount = array
+//         .reduce((acc, index) => (acc[index] = ((acc[index] || 0) + 1), acc), {});
+//     const identicCount = Object.values(objCount).filter(index => index > 1).length;
+//     return identicCount;
 // };
 
 //---------------------------------------------------------------------
@@ -247,6 +246,6 @@ let litmir = [
 const propertyValue = (array, key) => array
     .map((item) => item[key])
     .join(', ');
-    
+
 console.log(propertyValue(litmir, 'title'));
 console.log(propertyValue(litmir, 'author'));
