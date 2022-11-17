@@ -1,12 +1,11 @@
 .my-menu {
-    position: relative;    
+    position: relative;
     margin-left: 10px;
 }
 
 button {
     width: 100px;
-    height: 30px;
-    margin-top: 10px;
+    height: 30px;    
 }
 
 .closed {
@@ -16,12 +15,19 @@ button {
 
 .open {
     position: absolute;
-    display: block;        
-    background-color: burlywood;    
+    display: block;
     height: 100px;
     width: 100px;
     padding-top: 10px;
     padding-left: 10px;
-    transform: translateY(5px);
     margin-left: 10px;    
+    background-color: burlywood;
+    animation: MyAnimation 1s;
+    z-index: -1;
+}
+
+@keyframes MyAnimation
+{
+    from { top: -100px; }
+    to { top: 25px;}
 }
