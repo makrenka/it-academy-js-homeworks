@@ -1,5 +1,12 @@
 .my-menu {
-    position: relative;
+    position: relative;    
+    margin-left: 10px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
 }
 
 .closed {
@@ -9,6 +16,12 @@
 
 .open {
     position: absolute;
-    display: block;    
-    transform: translateY(30px);    
+    display: block;        
+    background-color: burlywood;    
+    height: 100px;
+    width: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+    transform: translateY(5px);
+    margin-left: 10px;    
 }

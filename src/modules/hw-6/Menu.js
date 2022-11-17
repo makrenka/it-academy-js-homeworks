@@ -13,7 +13,7 @@ export class Menu extends Component {
             return {
                 isOpen: state.isOpen ? false : true,
             }
-        })
+        });
     }
 
     componentDidMount() {
@@ -28,7 +28,7 @@ export class Menu extends Component {
     static get observedAttributes () {
         return ['items', 'href'];
     }
-
+    
     render() {        
         return `
             <my-button togglemenu="toggle-menu">Click</my-button>
