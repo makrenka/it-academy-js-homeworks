@@ -17,21 +17,26 @@ export class Menu extends Component {
     }
 
     componentDidMount() {
-        this.addEventListener('toggle-menu', this.toggleMenu);
+        this.addEventListener('toggle-menu', this.toggleMenu); 
+                      
     }
 
     componentWillUnmount() {
         this.removeEventListener('toggle-menu', this.toggleMenu);
     }
 
-    render() {
+    static get observedAttributes () {
+        return ['items', 'href'];
+    }
+
+    render() {        
         return `
+            <my-button togglemenu="toggle-menu">Click</my-button>
             <ul class="${this.state.isOpen ? "open" : "closed"}">
-                ${this.props.map(item => `<li>${item.label}</li>`)}
+                <li><a href="${this.props.href}">${this.props.items}</a></li>
             </ul>
-        `
+        `        
     }
 }
 
 customElements.define('my-menu', Menu);
-

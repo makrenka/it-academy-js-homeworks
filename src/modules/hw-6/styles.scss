@@ -1,0 +1,14 @@
+.my-menu {
+    position: relative;
+}
+
+.closed {
+    position: absolute;
+    display: none;
+}
+
+.open {
+    position: absolute;
+    display: block;    
+    transform: translateY(30px);    
+}
