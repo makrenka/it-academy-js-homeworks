@@ -26,14 +26,15 @@ export class Menu extends Component {
     }
 
     static get observedAttributes () {
-        return ['items', 'href'];
+        return ['items'];
     }
     
     render() {        
+        const items = JSON.parse(this.props.items);
         return `
             <my-button togglemenu="toggle-menu">Click</my-button>
             <ul class="${this.state.isOpen ? "open" : "closed"}">
-                <li><a href="${this.props.href}">${this.props.items}</a></li>
+                ${items.map(item => `<li><a href="${item.href}">${item.label}</a></li>`).join('')}
             </ul>
         `        
     }

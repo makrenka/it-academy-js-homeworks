@@ -11,6 +11,18 @@ export class App extends Component {
                     label: "link 1",
                     href: "Google.com",
                 },                               
+                {
+                    label: "link 2",
+                    href: "Google.com",
+                },                               
+                {
+                    label: "link 3",
+                    href: "Google.com",
+                },                               
+                {
+                    label: "link 4",
+                    href: "Google.com",
+                },                               
             ]
         };
     };
@@ -18,8 +30,7 @@ export class App extends Component {
     render() {
         return `        
         <my-menu 
-            items="${this.state.menuItems.map(item => item.label)}" 
-            href="${this.state.menuItems.map(item => item.href)}"
+            items='${JSON.stringify(this.state.menuItems)}'             
             togglemenu="toggle-menu"
             class="my-menu">
         </my-menu>
