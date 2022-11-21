@@ -1,0 +1,33 @@
+.my-menu {
+    position: relative;
+    margin-left: 10px;
+}
+
+button {
+    width: 100px;
+    height: 30px;    
+}
+
+.closed {
+    position: absolute;
+    display: none;
+}
+
+.open {
+    position: absolute;
+    display: block;
+    height: 120px;
+    width: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-left: 10px;    
+    background-color: burlywood;
+    animation: MyAnimation 1s;
+    z-index: -1;
+}
+
+@keyframes MyAnimation
+{
+    from { top: -100px; }
+    to { top: 25px;}
+}
