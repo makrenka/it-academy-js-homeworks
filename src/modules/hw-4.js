@@ -19,7 +19,7 @@
 // let str1 = vegetables.join();
 // let str2 = vegetables.toString();
 
-// console.log(str1); 
+// console.log(str1);
 // console.log(str2);
 
 //---------------------------------------------------------------------
@@ -28,22 +28,22 @@
 
 // const num = prompt('Введите число', 55);
 
-// function colonOdd (num) {
-//   let arr = num.split('').map((item) => +item);    
-//   let arrMod = [arr[0]];
+// function colonOdd(num) {
+//     let arr = num.split('').map((item) => +item);
+//     let arrMod = [arr[0]];
 
-//   for (let i = 1; i < arr.length; i++) {        
-//     if ((arr[i-1] % 2 !== 0) && (arr[i] % 2 !== 0)) {
-//       arrMod.push(':', arr[i]);
-//     } else {
-//       arrMod.push(arr[i]);
-//     }    
-//   }
+//     for (let i = 1; i < arr.length; i++) {
+//         if ((arr[i - 1] % 2 !== 0) && (arr[i] % 2 !== 0)) {
+//             arrMod.push(':', arr[i]);
+//         } else {
+//             arrMod.push(arr[i]);
+//         }
+//     }
 
-//   return arrMod.join('');  
+//     return arrMod.join('');
 // }
 
-// console.log(colonOdd (num));
+// console.log(colonOdd('555544'));
 
 // !!! Second option:
 
@@ -61,6 +61,8 @@
 //         })
 //         .join("");
 // };
+
+// console.log(colonOdd('5555444'));
 
 //---------------------------------------------------------------------
 
@@ -127,7 +129,9 @@
 // const removeDuplicates = (array) => {
 //     let res = array.filter((item, index) => array.indexOf(item) === index);
 //     return res;
-// }
+// };
+
+// console.log(removeDuplicates(arr));
 
 //---------------------------------------------------------------------
 
@@ -181,17 +185,18 @@
 //     return count;
 // }
 
-// console.log(countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8]));
-// console.log(countIdentic([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]));
-
 // !!! Second option:
 
 // const countIdentic = (array) => {
 //     const objCount = array
 //         .reduce((acc, index) => (acc[index] = ((acc[index] || 0) + 1), acc), {});
+//     console.log(objCount);
 //     const identicCount = Object.values(objCount).filter(index => index > 1).length;
 //     return identicCount;
 // };
+
+// console.log(countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8]));
+// console.log(countIdentic([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]));
 
 //---------------------------------------------------------------------
 
@@ -225,27 +230,27 @@
 
 // 10. Find all values of a given property
 
-let litmir = [
-    { author: 'Хэленка', title: 'Улетела сказка' },
-    { author: 'Коул Кресли', title: 'Восстание Аркан' },
-    { author: 'Райчел Мид', title: 'Золотая лилия' }
-];
+// let litmir = [
+//     { author: 'Хэленка', title: 'Улетела сказка' },
+//     { author: 'Коул Кресли', title: 'Восстание Аркан' },
+//     { author: 'Райчел Мид', title: 'Золотая лилия' }
+// ];
 
-// function propertyValue(array, key) {
-//     let arr = [];
-//     for (let item of array) {
-//         if (item.hasOwnProperty(key)) {
-//             arr.push(item[key]);
-//         }
-//     }
-//     return arr;
-// }
+// // function propertyValue(array, key) {
+// //     let arr = [];
+// //     for (let item of array) {
+// //         if (item.hasOwnProperty(key)) {
+// //             arr.push(item[key]);
+// //         }
+// //     }
+// //     return arr;
+// // }
 
-// !!! Second option:
+// // !!! Second option:
 
-const propertyValue = (array, key) => array
-    .map((item) => item[key])
-    .join(', ');
+// const propertyValue = (array, key) => array
+//     .map((item) => item[key])
+//     .join(', ');
 
-console.log(propertyValue(litmir, 'title'));
-console.log(propertyValue(litmir, 'author'));
+// console.log(propertyValue(litmir, 'title'));
+// console.log(propertyValue(litmir, 'author'));
